@@ -1,19 +1,14 @@
 ---
 cloud: experience-cloud
-solution-title: Läs mer & Support
-solution-hub-url: https://helpx.adobe.com/support/experience-manager.html
-getting-started-title: Komma igång
-getting-started-url: https://helpx.adobe.com/experience-manager/get-started.html
-tutorials-title: Tutorials
-tutorials-url: https://experienceleague.adobe.com/?tag=Tutorial#recommended/solutions/experience-manage
+feature-set: Experience Manager Forms
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-document-security.sv-SE
 index: true
 translation-type: tm+mt
-source-git-commit: 29c078e0820b42b53eb65061893e45c8cb63e549
+source-git-commit: f441620b5463ffa0c038f76e1b92c4e3a56d23b2
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 2%
+source-wordcount: '130'
+ht-degree: 1%
 
 ---
 
