@@ -7,12 +7,11 @@ audience: end-user
 user-guide-title: Adobe Experience Manager Document Security Guide
 breadcrumb-title: Dokumentsäkerhetsguide
 user-guide-description: Dokumentsäkerhetstillägget för Microsoft® Office ser till att endast de personer du har behörighet att använda Word-, Excel- och PowerPoint-filer som innehåller din immateriella egendom.
-feature: Document Security
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 7be2b17e7685a391dcccde2cc008802b5773cadf
+feature: Dokumentsäkerhet
+role: User
+source-git-commit: 30aa9eea28832fba634fb7710c0cc0666a9f3b7e
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
