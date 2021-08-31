@@ -5,16 +5,15 @@ uuid: 9d7eb6bb-4780-4d82-8657-7c6c6d523af0
 content-type: reference
 topic-tags: installing
 discoiquuid: f1cdf344-efe4-4cb5-9fc3-47ee4ba5faf4
-translation-type: tm+mt
-source-git-commit: ac385c538cdd7d3bb4772b92ee7a94b003595f56
+exl-id: 88759737-d57f-4354-951e-ad9f62d0a872
+source-git-commit: 13c487b13acb0d65f02301c881bfade512428bcd
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2764'
 ht-degree: 0%
 
 ---
 
-
-# Installera och konfigurera AEM dokumentsäkerhetstillägg för Microsoft Office{#installing-and-configuring-aem-document-security-extension-for-microsoft-office}
+# Installera och konfigurera AEM Document Security Extension for Microsoft Office{#installing-and-configuring-aem-document-security-extension-for-microsoft-office}
 
 I det här dokumentet får du hjälp med att installera och konfigurera Adobe Experience Manager Document Security Extension för Microsoft Office.
 
@@ -30,7 +29,7 @@ Innan du installerar Document Security Extension för Microsoft Office bör du k
 
 * Du har läst [versionsinformationen](document-security-extension-release-notes.md).
 * Microsoft Office är aktiverat. Aktiveringsdialogrutan visas inte när Microsoft Office-program öppnas.
-* De senaste Service Pack-versionerna för Microsoft Windows och Microsoft Office är installerade.
+* De senaste Service Pack-uppdateringarna för Microsoft Windows och Microsoft Office är installerade.
 * Om du installerar Document Security för Microsoft Office för ett språk som inte stöds, öppnar du Office-programmet minst en gång.
 
 >[!NOTE]
@@ -51,7 +50,7 @@ AEM Document Security Extension för Microsoft Office stöder inte plugin-progra
 
 ## Systemkrav {#system-requirements}
 
-### Klient för dokumentsäkerhetstillägg {#document-security-extension-client}
+### Document Security Extension Client {#document-security-extension-client}
 
 Kontrollera följande minimikonfigurationer som du vill installera Document Security Extension på:
 
@@ -60,7 +59,7 @@ Kontrollera följande minimikonfigurationer som du vill installera Document Secu
 
 * 32- eller 64-bitarsversionerna av Microsoft Office 2013, 2016, 2019 och Microsoft Office installerade som en del av Office 365 på engelska, franska, tyska, japanska, italienska, spanska, brasiliansk portugisiska, koreanska, förenklad kinesiska eller traditionell kinesiska.
 
-   **Obs**:  *AEM Document Security Extension för Microsoft Office stöder inte plugin-program från tredje part för Microsoft Office-program. Eftersom det här tillägget kan skapa konflikt med plugin-program från tredje part måste alla plugin-program från andra tillverkare än Adobe för Microsoft Office avinstalleras innan Document Security Extension för Microsoft Office installeras. Adobe har inte stöd för Document Security Extensions för Microsoft Office-program med installerade plugin-program från tredje part.*
+   **Obs**:  *AEM Document Security Extension för Microsoft Office stöder inte plugin-program från tredje part för Microsoft Office-program. Eftersom det här tillägget kan skapa konflikt med plugin-program från andra tillverkare måste alla plugin-program från andra tillverkare än Adobe för Microsoft Office avinstalleras innan Document Security Extension för Microsoft Office installeras. Adobe har inte stöd för Document Security Extensions för Microsoft Office-program med installerade plugin-program från tredje part.*
 
 * 1,3 GHz-processor eller bättre
 * 2 GB RAM
@@ -96,7 +95,7 @@ Installationsprogrammet är också tillgängligt som en MSI-fil som kan använda
 
    `msiexec /I DocumentSecurityExtensionforMicrosoftOffice.msi /qn`
 
-## Installationsprogrammet förkonfigureras för att ansluta till dokumentsäkerhet {#preconfiguring-the-installer-to-connect-to-document-security}
+## Konfigurera installationsprogrammet för att ansluta till dokumentsäkerhet {#preconfiguring-the-installer-to-connect-to-document-security}
 
 Du kan förkonfigurera Document Security Extension för Microsoft Office så att det pekar på en LiveCycle- eller AEM-server så att användare som installerar Document Security Extension för Microsoft Office kan använda funktionerna utan att konfigurera någon anslutning. Användarna kan öppna skyddade dokument utan att behöva göra någon konfiguration. De kan dock inte skydda nya dokument förrän de konfigurerar klienten att använda en viss server.
 
@@ -104,7 +103,13 @@ I följande steg beskrivs hur du skapar och konfigurerar en MSI-fil. Den här MS
 
 ### Krav för att anpassa installationsprogrammet {#prerequisites-for-customizing-the-installer}
 
-Använd Orca-databasredigeraren för att anpassa installationsprogrammet. I följande steg beskrivs hur du skapar en anpassad MSI-fil genom att ändra en kopia av MSI-installationsfilen med hjälp av Orca-databasredigeraren. Orca finns som en del av Windows SDK för Windows Server 2008 och .NET Framework 3.5. Mer information om hur du redigerar Microsoft Windows® Installer-filer med Orca finns i [Microsoft Support](http://support.microsoft.com/kb/255905/EN-US/).
+Använd Orca-databasredigeraren för att anpassa installationsprogrammet. I följande steg beskrivs hur du skapar en anpassad MSI-fil genom att ändra en kopia av MSI-installationsfilen med hjälp av Orca-databasredigeraren. Orca finns som en del av Windows SDK för Windows Server 2008 och .NET Framework 3.5.
+
+<!--
+
+For more information about how to edit Microsoft Windows® Installer files using Orca, see [Microsoft Support](http://support.microsoft.com/kb/255905/EN-US/).
+
+-->
 
 >[!NOTE]
 >
@@ -112,7 +117,7 @@ Använd Orca-databasredigeraren för att anpassa installationsprogrammet. I föl
 
 #### Installera Orca {#install-orca}
 
-1. Hämta Windows SDK för Windows Server 2008 och .NET Framework 3.5 från [Microsoft Download Center](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=11310).
+1. Hämta Windows SDK för Windows Server 2008 och .NET Framework 3.5.
 1. Dubbelklicka på filen Orca.msi i mappen \Microsoft SDK\bin.
 
    Du behöver också MSI-varianten av installationsfilen. Kontakta Adobe support för att få den senaste versionen av MSI-installationsprogrammet.
@@ -237,7 +242,7 @@ Innan du börjar förkonfigurerar du installationsprogrammet så att det pekar p
    >
    >Ett vanligt tillvägagångssätt är att använda samma filnamn som den ursprungliga MSI-filen (till exempel `DocumentSecurityExtensionforMicrosoftOffice.msi`).
 
-## Aktivera automatiskt skydd av nya dokument {#enabling-automatic-protection-of-new-documents}
+## Automatiskt skydd av nya dokument {#enabling-automatic-protection-of-new-documents}
 
 Administratören kan aktivera möjligheten att automatiskt skydda alla dokument som användaren sparar. Administratören konfigurerar principfunktionen Auto-apply i installationsprogrammet för Document Security Extension för Microsoft Office.
 
@@ -248,7 +253,7 @@ Om Automatisk tillämpning av princip är aktiverat skyddas alla dokument som an
 
 Mer information om hur du konfigurerar principen Autoapply finns i [Konfigurera ett automatiskt program med standardprincipen](installing-configuring-aemdsext.md#p-configuring-automatic-application-of-a-default-policy-p).
 
-## Aktivera det bandfria användargränssnittet {#enable-ribbon-less-user-interface}
+## Aktivera bandfritt användargränssnitt {#enable-ribbon-less-user-interface}
 
 Du kan aktivera/inaktivera det bandfria användargränssnittet genom att ändra inställningarna i Windows-registret. Så här uppdaterar du registret och aktiverar menyfliksområdet mindre användargränssnitt:
 
@@ -275,7 +280,7 @@ Du kan ändra inställningarna i Windows-registret så att den dynamiska vattens
 >
 >I Utforskaren i Windows kan du använda Arkiv-menyn eller snabbmenyn för att skapa ett Microsoft Excel-dokument. För dokument som skapats med angivna metoder går det inte att hämta eller ändra utskriftsdatumet. Det är en begränsning för Microsoft Excel. AEM dokumentsäkerhetsvattenstämplar är beroende av dokumentets utskriftsdatum. För sådana dokument återställs vattenstämpeln till ett tidigare datum. Dessutom behålls inte sidhuvuden och sidfötter.
 
-## Lägg till en anpassad försättsblad i ett dokument {#coverpage}
+## Lägga till en anpassad försättsblad i ett dokument {#coverpage}
 
 En användare kan försöka öppna det skyddade dokumentet på en dator som inte har något AEM Document Security för Microsoft Office-plugin installerat. Sådana datorer kan inte öppna dokumentet. På sådana datorer kan du visa en försättssida med instruktioner om hur du hämtar AEM Document Security för Microsoft Office-plugin och annan information.
 
@@ -358,7 +363,7 @@ Filen CommonResources.dll innehåller information om resursmallarna. Den innehå
    >
    >Ta inte bort och lägg inte till resurstyper i slumpmässig ordning. Efter 101, konfigurera 102 och så vidare.
 
-### Paketera filen CommonResources.dll med installationsprogrammet AEM Document Security-tillägget för Microsoft Office {#package-custom-commonresources-dll-file-with-the-installer-of-aem-document-security-extension-for-microsoft-office}
+### Paketera filen CommonResources.dll med installationsprogrammet AEM Document Security-tillägget för Microsoft Office  {#package-custom-commonresources-dll-file-with-the-installer-of-aem-document-security-extension-for-microsoft-office}
 
 Du kan anpassa filen CommonResources.dll och lägga till en anpassad försättsblad. När du har anpassat filen kan du ersätta originalfilen manuellt med den anpassade filen på alla arbetsstationer eller välja en automatiserad metod för att ersätta filen.
 

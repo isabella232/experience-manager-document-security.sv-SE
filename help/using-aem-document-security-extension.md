@@ -5,16 +5,15 @@ uuid: db4abbc8-eb21-4f4a-9950-224ada95ce66
 content-type: reference
 topic-tags: using
 discoiquuid: f4c2460c-174f-4e4d-b804-1eb051d2781e
-translation-type: tm+mt
-source-git-commit: 21288f7f1c8f786d3c4c363986226038bdb03e26
+exl-id: 667a9718-b865-4911-96c2-7c08f75e0732
+source-git-commit: 13c487b13acb0d65f02301c881bfade512428bcd
 workflow-type: tm+mt
-source-wordcount: '6270'
+source-wordcount: '6252'
 ht-degree: 0%
 
 ---
 
-
-# Använda AEM dokumentsäkerhetstillägg för Microsoft Office{#using-aem-document-security-extension-for-microsoft-office}
+# Använda AEM Document Security Extension för Microsoft Office{#using-aem-document-security-extension-for-microsoft-office}
 
 ## Protect-filer med AEM Document Security Extension {#usingaemdocumentsecurityextensiontoprotectfiles}
 
@@ -30,7 +29,7 @@ Med Document Security Extension för Microsoft Office kan du utföra följande u
 * Öppna webbsidorna Dokumentsäkerhet om du vill återkalla åtkomst till filer eller ändra profilen för filen
 * Öppna webbsidorna Dokumentsäkerhet för att visa filens granskningshistorik
 
-### Anslut till en dokumentsäkerhetsserver {#connect-to-a-document-security-server}
+### Ansluta till en dokumentsäkerhetsserver {#connect-to-a-document-security-server}
 
 Om du tänker tillämpa profiler på filer måste du konfigurera anslutningsinställningarna för dokumentsäkerhet. Beroende på hur Document Security Extension for Microsoft Office installerades kanske du redan har standardanslutningsinställningar. Du kan lägga till anslutningsinställningar för en eller flera instanser av dokumentsäkerhet. Du kan hämta serverinformation från dokumentsäkerhetsadministratören.
 
@@ -40,7 +39,7 @@ Om dokumentsäkerhetsservern använder certifikatbaserad autentisering måste du
 
 När du har konfigurerat anslutningsinställningarna för en instans av Dokumentsäkerhet i ett Microsoft Office-program konfigureras den för alla Word, Excel och PowerPoint.
 
-#### Installera klientcertifikatet {#install-the-client-side-certificate}
+#### Installera certifikatet på klientsidan {#install-the-client-side-certificate}
 
 Om du måste få åtkomst till webbsidorna Dokumentsäkerhet via certifikatautentisering eller tvåvägsautentisering får du det certifikat som du måste installera på din lokala dator. Du får en certifikatfil (.PFX- eller .P12-fil) och dess lösenord.
 
@@ -53,7 +52,7 @@ Om du måste få åtkomst till webbsidorna Dokumentsäkerhet via certifikatauten
 
 #### Konfigurera anslutningsinställningar {#configure-connection-settings}
 
-1. Välj **Välj Server** på fliken **Dokumentsäkerhet** i Dokumentsäkerhetstillägg för Microsoft Office 2010 och Office 2013.
+1. I Document Security Extension för Microsoft Office 2010 och Office 2013 väljer du **Dokumentsäkerhet** på fliken **Välj server**.
 1. Klicka antingen på **Nytt** om du vill skapa nya anslutningsinställningar eller markera en befintlig anslutning och klicka på **Redigera**.
 1. Skriv ett namn för anslutningen i rutan **Namn**. Du kan använda vilket namn som helst.
 1. Skriv serveradressen i rutan **Serveradress**.
@@ -77,9 +76,9 @@ Om du måste få åtkomst till webbsidorna Dokumentsäkerhet via certifikatauten
 
 >[!NOTE]
 >
->Om du inte kan ansluta till dokumentsäkerhet visas ett meddelande om att användarnamnet och lösenordet är felaktiga. Kontrollera konfigurationsinställningarna och försök igen. Det här meddelandet kan visas om du inte kan ansluta av någon annan anledning. Om du ansluter till servern för första gången kontrollerar du att du har angett servernamnet och porten korrekt.
+>Om du inte kan ansluta till dokumentskyddet visas ett meddelande om att användarnamnet och lösenordet är felaktiga. Kontrollera konfigurationsinställningarna och försök igen. Det här meddelandet kan visas om du inte kan ansluta av någon annan anledning. Om du ansluter till servern för första gången kontrollerar du att du har angett servernamnet och porten korrekt.
 
-#### Ange standardservern {#specify-the-default-server}
+#### Ange standardserver {#specify-the-default-server}
 
 1. Gör följande:
 
@@ -87,7 +86,7 @@ Om du måste få åtkomst till webbsidorna Dokumentsäkerhet via certifikatauten
 
 1. Välj en server som ska anges som standard och klicka på **Ange standard**. En stjärna visas bredvid standardservern.
 
-### Använda autentiseringsproviders från tredje part {#using-third-party-authentication-providers}
+### Använda autentiseringsleverantörer från tredje part {#using-third-party-authentication-providers}
 
 Du kan använda autentiseringsleverantörer från tredje part med AEM Forms Document Security. Dessa autentiseringsleverantörer hjälper dig att lägga till ytterligare ett åtkomstlager till de skyddade dokumenten. AEM Forms Document Security har stöd för följande utökade autentiseringsarbetsflöden:
 
@@ -143,7 +142,7 @@ Utför följande steg för att aktivera utökad autentisering med en anpassad la
 
    Nu är AEM Forms dokumentsäkerhet konfigurerat att använda utökad autentisering med en anpassad landnings-URL
 
-#### Standardarbetsflöde för utökad autentisering med identitetsleverantörer från tredje part konfigurerade på AEM Forms-servern {#default-extended-authentication-workflow-with-third-party-identity-providers-configured-on-aem-forms-server}
+#### Standardarbetsflöde för utökad autentisering med tredjepartsidentitetsleverantörer konfigurerade på AEM Forms-servern {#default-extended-authentication-workflow-with-third-party-identity-providers-configured-on-aem-forms-server}
 
 Utökad autentisering kan använda olika typer av autentisering som är tillgängliga på AEM Forms-servern. Exempel: SAML, [Fler exempel].
 
@@ -203,7 +202,7 @@ Om du får en e-postregistreringsinbjudan från Document Security kan du registr
 1. I rutan **Lösenord** skriver du lösenordet som du skapade när du registrerade dig.
 1. Klicka på **Logga in**.
 
-### Skapa och hantera profiler {#creating-and-managing-policies}
+### Skapa och hantera policyer {#creating-and-managing-policies}
 
 Om du har behörighet från administratören för dokumentsäkerhet kan du skapa profiler som ska tillämpas på dina egna filer på sidan Profiler på webbsidorna Dokumentsäkerhet.
 
@@ -333,7 +332,7 @@ När du har tillämpat en profil läggs den till i listan Senast använda på me
 >[!NOTE]
 Du kan bara tillämpa profiler på Word-dokumentfiler (.doc, även.docx och .docm i Microsoft Office 2010 och 2013), Excel-arbetsboksfiler (.xls, även .xlsx och .xlsm i Microsoft Office 2010 och 2013) och PowerPoint-presentationsfiler (.ppt, även .pptx, och .pptm i Microsoft Office 2010 och 2013). Du kan inte använda profiler på Word-mallfiler (.dot), Excel-mallfiler (.xlt) och PowerPoint-designmallfiler (.pot).
 
-#### Använd en profil {#apply-a-policy}
+#### Tillämpa en profil {#apply-a-policy}
 
 1. Välj **Skydda > Välj profil** i Dokumentsäkerhetstillägg för Microsoft Office 2010 och 2013 på fliken **Dokumentsäkerhet**.
 
@@ -366,7 +365,7 @@ När du använder Office-program som stöder Document Security Extension rekomme
 
 Om en funktion inte är tillgänglig är kommandonamnet på menyn och den relaterade verktygsfältsknappen inte tillgängliga. När du håller muspekaren över kommandot eller knappen i dokumentsäkerhetstillägget för Microsoft Office visas ett verktygstips som anger att kommandot inte är tillgängligt av Dokumentsäkerhet.
 
-### Öppnar principskyddade filer {#opening-policy-protected-files}
+### Öppna principskyddade filer {#opening-policy-protected-files}
 
 Du kan öppna principskyddade filer på samma sätt som du använder för att öppna andra filer. Om du inte redan är inloggad på Dokumentsäkerhet uppmanas du att göra det, såvida du inte inte är ansluten till Internet och kan öppna filen offline. Om du avbryter inloggningen nekas åtkomst.
 
@@ -473,13 +472,13 @@ Document Security Extension for Microsoft Office har stöd för följande vatten
  </tbody>
 </table>
 
-### Öppna webbsidorna för dokumentsäkerhet {#opening-the-document-security-web-pages}
+### Öppna webbsidorna Dokumentsäkerhet {#opening-the-document-security-web-pages}
 
 Du kan öppna webbsidorna Dokumentsäkerhet för att skapa och uppdatera dina användarprofiler och visa status och granskningsinformation om dina profilskyddade filer. Du kan också använda webbsidorna Dokumentsäkerhet för att ändra profiler eller återkalla åtkomst för en profilskyddad fil.
 
 Om du vill öppna webbsidorna Dokumentsäkerhet går du till Dokumentsäkerhetstillägg för Microsoft Office 2010 och 2013 och väljer **Dokumentsäkerhet** på fliken **Skapa och hantera profiler**. Om du ännu inte har angett någon inloggningsinformation öppnas webbläsaren på serverinloggningssidan.
 
-### Ändrar profiler {#changing-policies}
+### Ändra profiler {#changing-policies}
 
 Om du har behörighet, vanligtvis som dokumentsäkerhetsadministratör eller filutgivare, kan du senare tillämpa en annan profil på en fil eller ändra inställningarna för den profil som används för tillfället.
 
@@ -491,7 +490,7 @@ Om du vill ändra inställningarna för en profil använder du webbsidorna Dokum
 
 1. Välj en profil i listan och klicka på **Använd**.
 
-### Återkallar filåtkomstbehörighet {#revoking-file-access-privileges}
+### Återkalla filåtkomstbehörighet {#revoking-file-access-privileges}
 
 Du kan återkalla möjligheten att öppna filer som du har skyddat. När du återkallar åtkomsträttigheter för en fil kan du även ange det meddelande som visas för alla som försöker öppna filen och URL:en till en uppdaterad version av filen om du ersätter den med en ändrad kopia.
 
@@ -770,8 +769,6 @@ Du kan använda autentiseringsleverantörer från tredje part med AEM Forms Docu
 * Standardarbetsflöde för utökad autentisering med tredjepartsidentitetsleverantörer konfigurerade på AEM Forms på JEE-servern
 * Anpassat arbetsflöde för utökad autentisering med tredjepartsidentitetsleverantörer konfigurerade på AEM Forms på JEE-servern
 * Utökad autentisering med anpassad sida för att lista SAML-autentiseringar
-
-Detaljerade steg för att konfigurera utökade autentiseringsarbetsflöden finns i [artikeln Extended Authentication Scenarios](http://blogs.adobe.com/livecycle/2011/12/extended-authentication-scenarios.html)
 
 ## Ordlista {#glossary}
 
