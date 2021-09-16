@@ -1,17 +1,13 @@
 ---
-cloud: Experience Cloud
-product: adobe experience manager
-solution: Experience Manager
-type: Documentation
 audience: end-user
 user-guide-title: Adobe Experience Manager Document Security Guide
 breadcrumb-title: Dokumentsäkerhetsguide
 user-guide-description: Dokumentsäkerhetstillägget för Microsoft® Office ser till att endast de personer du har behörighet att använda Word-, Excel- och PowerPoint-filer som innehåller din immateriella egendom.
-feature: Dokumentsäkerhet
+feature: Document Security
 role: User
-source-git-commit: 30aa9eea28832fba634fb7710c0cc0666a9f3b7e
+source-git-commit: f8c8ec57aa5966b4b55ad782d8fdf0a156de25c4
 workflow-type: tm+mt
-source-wordcount: '99'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
